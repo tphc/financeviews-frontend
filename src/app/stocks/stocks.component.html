@@ -1,0 +1,9 @@
+<h2>My Stocks</h2>
+<ul class="stocks">
+  <li *ngFor="let stock of stocks" (click)="onSelectstock(stock)"
+      [class.selected]="stock === selectedStock">
+    <span class="badge">{{stock.id}}</span> {{stock.name}}
+  </li>
+</ul>
+
+<app-stock-data [stock]="selectedStock"></app-stock-data>
